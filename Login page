@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+	<?php
+		$user_name="username";
+		setcookie($user_name_name, time() + (86400 * 30), "/");
+	?>
+<html>
+<head>
+    <title>Guess the Word!</title>
+	<style>
+		body {
+			background-image:url(soccer4.jpg);
+			background-attachment: fixed;
+			height: 100%; 
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.userRequest {
+			color: red;
+			text-align: center;
+			width: 100%;
+			font-size: 40px;
+		}
+		.welcomeMessage {
+				color: purple;
+		}
+		.container {
+			text-align: center;
+			width:80%; 
+			max-width: 800px;
+			margin:7px auto; 
+			padding:25px; 
+			border:0px black solid; 
+			background:#FFF;
+			min-height: 550px;
+			border-radius:10px;
+			opacity: 0.65;
+			float: left;
+		}
+		.loginContainer {
+			text-align: center;
+			color: #000;
+			font-weight: bold;
+		}
+		#sp1 {
+			color: #006400;
+		}
+		label {
+			font-weight: bold;
+			font-size: 30px;
+		}
+		.form {
+			background-color: light-blue;
+		}
+		
+	</style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="welcomeMessage">Welcome to <span id="sp1">Guess the Word! </span> (World Cup Edition)</h1><br>
+        <h3 class="userRequest">Please enter your Username and Password</h3><br>
+        <form class="loginContainer "name="login" method="post" action="worldcup.php">
+			<div class="formGroup">
+               <label>Username:</label>
+               <input type="text" name="fname" class="textbox" autofocus required  
+                      placeholder="username" title="first name" maxlength="20" pattern="[A-Za-z'-]{2,20}" />
+            </div>
+			<br>
+			<div class="form">
+               <label>Password:</label>
+               <input type="password" name="fname" class="textbox" autofocus required  
+                      placeholder="password" title="first name" maxlength="20" pattern="[A-Za-z'-]{2,20}" />
+            </div>
+			<br>
+			<p><input type="submit" name="submit" value="Login"/></p>
+
+		</form>
+  </div>
+</body>
+</html>
